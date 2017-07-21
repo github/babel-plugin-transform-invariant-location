@@ -1,6 +1,7 @@
 {
   "name": "babel-plugin-transform-invariant-location",
   "version": "1.0.0",
+  "description": "Babel plugin that rewrites invariant calls with their source location",
   "main": "index.js",
   "repository": {
     "type": "git",
