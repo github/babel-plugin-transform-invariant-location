@@ -1,0 +1,11 @@
+{
+  "name": "babel-plugin-transform-invariant-location",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github/babel-plugin-transform-invariant-location.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/github/babel-plugin-transform-invariant-location#readme"
+}
