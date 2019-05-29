@@ -11,7 +11,18 @@ module.exports = function(opts) {
             return
           }
 
-          const location = `${this.getModuleName()}.js:${path.node.loc.start.line}`
+          let moduleName = this.getModuleName()
+          if (moduleName) {
+            moduleName = t.stringLiteral(moduleName) + '.js'
+          } else {
+            try {
+              moduleName = this.file.opts.filename.replace(`${this.cwd}/`, '')
+            } catch (err) {
+              return
+            }
+          }
+
+          const location = `${moduleName}:${path.node.loc.start.line}`
           const message = path.node.arguments.length === 2 ?
             `${path.node.arguments[1].value} -- ${location}` :
             location
